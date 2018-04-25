@@ -12,7 +12,7 @@ by adding `fn_load_tester` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:fn_load_tester, "~> 0.1.0"}
+    {:fn_load_tester, "~> 0.1.0", only: :dev}
   ]
 end
 ```

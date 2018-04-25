@@ -63,9 +63,7 @@ defmodule FnLoadTester.Stats do
 end
 
 defmodule FnLoadTester.Stats.Maximum do
-  @moduledoc """
-  Default Maximum.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: Enum.max(data)
@@ -74,9 +72,7 @@ defmodule FnLoadTester.Stats.Maximum do
 end
 
 defmodule FnLoadTester.Stats.Minimum do
-  @moduledoc """
-  Default Minimum.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: Enum.min(data)
@@ -85,9 +81,7 @@ defmodule FnLoadTester.Stats.Minimum do
 end
 
 defmodule FnLoadTester.Stats.Average do
-  @moduledoc """
-  Default Average.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: average(data)
@@ -106,7 +100,7 @@ defmodule FnLoadTester.Stats.Percentile do
   """
 
   @doc """
-  It return the percentile **p** of the given **data**
+  It returns the percentile **p** of the given **data**
   """
   @spec percentile([number()], integer()) :: number()
   def percentile(data, p) do
@@ -124,9 +118,7 @@ defmodule FnLoadTester.Stats.Percentile do
 end
 
 defmodule FnLoadTester.Stats.Percentile50 do
-  @moduledoc """
-  Default Percentile 50.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: FnLoadTester.Stats.Percentile.percentile(data, 50)
@@ -135,9 +127,7 @@ defmodule FnLoadTester.Stats.Percentile50 do
 end
 
 defmodule FnLoadTester.Stats.Percentile90 do
-  @moduledoc """
-  Default Percentile 90.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: FnLoadTester.Stats.Percentile.percentile(data, 90)
@@ -146,9 +136,7 @@ defmodule FnLoadTester.Stats.Percentile90 do
 end
 
 defmodule FnLoadTester.Stats.Percentile95 do
-  @moduledoc """
-  Default Percentile 95.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: FnLoadTester.Stats.Percentile.percentile(data, 95)
@@ -157,9 +145,7 @@ defmodule FnLoadTester.Stats.Percentile95 do
 end
 
 defmodule FnLoadTester.Stats.Percentile99 do
-  @moduledoc """
-  Default Percentile 99.
-  """
+  @moduledoc false
   use FnLoadTester.Stats
 
   def calculate(data), do: FnLoadTester.Stats.Percentile.percentile(data, 99)

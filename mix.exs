@@ -9,7 +9,8 @@ defmodule FnLoadTester.MixProject do
       version: @version,
       elixir: "~> 1.6",
       package: package(),
-      description: "FnLoadTester is a helper tool to execute load tests against your functions, especially your GenServers, and calculate statistics of the test",
+      description:
+        "FnLoadTester is a helper tool to execute load tests against your functions, especially your GenServers, and calculate statistics of the test",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -18,7 +19,7 @@ defmodule FnLoadTester.MixProject do
         source_ref: "v#{@version}",
         extras: ["README.md"],
         source_url: "https://github.com/mendrugory/piton"
-]
+      ]
     ]
   end
 
@@ -29,9 +30,8 @@ defmodule FnLoadTester.MixProject do
     ]
   end
 
-  
   defp deps do
-    []
+    [{:earmark, ">= 0.0.0", only: :dev}, {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp package() do
@@ -40,5 +40,5 @@ defmodule FnLoadTester.MixProject do
       maintainers: ["Gonzalo Jiménez Fuentes"],
       links: %{"GitHub" => "https://github.com/mendrugory/fn_load_tester"}
     }
-end  
+  end
 end
