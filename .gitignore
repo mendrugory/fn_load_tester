@@ -23,4 +23,5 @@ erl_crash.dump
 fn_load_tester-*.tar
 
 mix.lock
+*.tar
 
